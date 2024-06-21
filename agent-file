@@ -1,0 +1,798 @@
+<<<check_mk>>>
+Version: 2.3.0p6
+AgentOS: linux
+Hostname: testmachine
+AgentDirectory: /etc/check_mk
+DataDirectory: /var/lib/check_mk_agent
+SpoolDirectory: /var/lib/check_mk_agent/spool
+PluginsDirectory: /usr/lib/check_mk_agent/plugins
+LocalDirectory: /usr/lib/check_mk_agent/local
+OSType: linux
+OSName: Ubuntu
+OSVersion: 22.04
+OSPlatform: ubuntu
+FailedPythonReason: 
+SSHClient: 
+<<<cmk_agent_ctl_status:sep(0)>>>
+{"version":"2.3.0p6","agent_socket_operational":true,"ip_allowlist":[],"allow_legacy_pull":true,"connections":[]}
+<<<checkmk_agent_plugins_lnx:sep(0)>>>
+pluginsdir /usr/lib/check_mk_agent/plugins
+localdir /usr/lib/check_mk_agent/local
+<<<labels:sep(0)>>>
+<<<df_v2>>>
+tmpfs                     tmpfs        3265944      3004   3262940       1% /run
+/dev/mapper/vgubuntu-root ext4       477336448 424031812  28983820      94% /
+tmpfs                     tmpfs       16329712    595136  15734576       4% /dev/shm
+tmpfs                     tmpfs           5120         4      5116       1% /run/lock
+efivarfs                  efivarfs         384        78       302      21% /sys/firmware/efi/efivars
+/dev/nvme0n1p2            ext4          719936    306916    360556      46% /boot
+/dev/nvme0n1p1            vfat          523248     85436    437812      17% /boot/efi
+tmpfs                     tmpfs       16329712         0  16329712       0% /run/qemu
+tmpfs                     tmpfs       16329712       720  16328992       1% /opt/omd/sites/v23p6/tmp
+<<<df_v2>>>
+[df_inodes_start]
+tmpfs                     tmpfs     4082428    1942  4080486    1% /run
+/dev/mapper/vgubuntu-root ext4     30384128 2772670 27611458   10% /
+tmpfs                     tmpfs     4082428    1509  4080919    1% /dev/shm
+tmpfs                     tmpfs     4082428       8  4082420    1% /run/lock
+efivarfs                  efivarfs        0       0        0     - /sys/firmware/efi/efivars
+/dev/nvme0n1p2            ext4        46848     318    46530    1% /boot
+/dev/nvme0n1p1            vfat            0       0        0     - /boot/efi
+tmpfs                     tmpfs     4082428       1  4082427    1% /run/qemu
+tmpfs                     tmpfs      816485     209   816276    1% /run/user/1000
+tmpfs                     tmpfs     4082428      77  4082351    1% /opt/omd/sites/v23p6/tmp
+[df_inodes_end]
+[df_lsblk_start]
+NAME                        UUID
+/dev/loop0                  
+/dev/loop1                  
+/dev/loop2                  
+/dev/loop3                  
+/dev/loop4                  
+/dev/loop5                  
+/dev/loop6                  
+/dev/loop7                  
+/dev/loop8                  
+/dev/loop9                  
+/dev/loop10                 
+/dev/loop11                 
+/dev/loop12                 
+/dev/loop13                 
+/dev/loop14                 
+/dev/loop16                 
+/dev/loop17                 
+/dev/loop18                 
+/dev/loop19                 
+/dev/loop20                 
+/dev/loop21                 
+/dev/loop22                 
+/dev/loop23                 
+/dev/loop24                 
+/dev/loop26                 
+/dev/loop27                 
+/dev/loop28                 
+/dev/loop29                 
+/dev/loop30                 
+/dev/loop31                 
+/dev/loop32                 
+/dev/loop33                 
+/dev/loop34                 
+/dev/loop35                 
+/dev/loop36                 
+/dev/loop37                 
+/dev/loop38                 
+/dev/loop39                 
+/dev/loop40                 
+/dev/loop41                 
+/dev/loop42                 
+/dev/loop43                 
+/dev/loop44                 
+/dev/loop45                 
+/dev/loop46                 
+/dev/loop47                 
+/dev/loop48                 
+/dev/mapper/nvme0n1p3_crypt 8jxI2L-J4Ph-oi48-Azb9-c3oi-yZaB-b9MnLz
+/dev/nvme0n1                
+/dev/nvme0n1p1              C25B-CBEF
+[df_lsblk_end]
+<<<nfsmounts_v2:sep(0)>>>
+<<<cifsmounts>>>
+<<<mounts>>>
+/dev/mapper/vgubuntu-root / ext4 rw,relatime,errors=remount-ro 0 0
+/dev/mapper/vgubuntu-root /var/snap/firefox/common/host-hunspell ext4 ro,noexec,noatime,errors=remount-ro 0 0
+/dev/nvme0n1p2 /boot ext4 rw,relatime 0 0
+/dev/nvme0n1p1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+<<<ps_lnx>>>
+[time]
+1719006567
+[processes]
+[header] CGROUP USER VSZ RSS TIME ELAPSED PID COMMAND
+0::/init.scope root 170276 14888 00:04:52 1-13:24:20 1 /sbin/init splash
+- root 0 0 00:00:00 1-13:24:20 2 [kthreadd]
+- root 0 0 00:00:00 1-13:24:20 3 [rcu_gp]
+- root 0 0 00:00:00 1-13:24:20 4 [rcu_par_gp]
+- root 0 0 00:00:00 1-13:24:20 5 [slub_flushwq]
+- root 0 0 00:00:00 1-13:24:20 6 [netns]
+- root 0 0 00:00:00 1-13:24:20 8 [kworker/0:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 11 [mm_percpu_wq]
+- root 0 0 00:00:00 1-13:24:20 12 [rcu_tasks_kthread]
+- root 0 0 00:00:00 1-13:24:20 13 [rcu_tasks_rude_kthread]
+- root 0 0 00:00:00 1-13:24:20 14 [rcu_tasks_trace_kthread]
+- root 0 0 00:00:21 1-13:24:20 15 [ksoftirqd/0]
+- root 0 0 00:01:37 1-13:24:20 16 [rcu_preempt]
+- root 0 0 00:00:00 1-13:24:20 17 [migration/0]
+- root 0 0 00:00:00 1-13:24:20 18 [idle_inject/0]
+- root 0 0 00:00:00 1-13:24:20 19 [cpuhp/0]
+- root 0 0 00:00:00 1-13:24:20 20 [cpuhp/1]
+- root 0 0 00:00:00 1-13:24:20 21 [idle_inject/1]
+- root 0 0 00:00:00 1-13:24:20 22 [migration/1]
+- root 0 0 00:00:27 1-13:24:20 23 [ksoftirqd/1]
+- root 0 0 00:00:00 1-13:24:20 25 [kworker/1:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 26 [cpuhp/2]
+- root 0 0 00:00:00 1-13:24:20 27 [idle_inject/2]
+- root 0 0 00:00:00 1-13:24:20 28 [migration/2]
+- root 0 0 00:00:12 1-13:24:20 29 [ksoftirqd/2]
+- root 0 0 00:00:00 1-13:24:20 31 [kworker/2:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 32 [cpuhp/3]
+- root 0 0 00:00:00 1-13:24:20 33 [idle_inject/3]
+- root 0 0 00:00:00 1-13:24:20 34 [migration/3]
+- root 0 0 00:01:01 1-13:24:20 35 [ksoftirqd/3]
+- root 0 0 00:00:00 1-13:24:20 37 [kworker/3:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 38 [cpuhp/4]
+- root 0 0 00:00:00 1-13:24:20 39 [idle_inject/4]
+- root 0 0 00:00:00 1-13:24:20 40 [migration/4]
+- root 0 0 00:00:06 1-13:24:20 41 [ksoftirqd/4]
+- root 0 0 00:00:00 1-13:24:20 43 [kworker/4:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 44 [cpuhp/5]
+- root 0 0 00:00:00 1-13:24:20 45 [idle_inject/5]
+- root 0 0 00:00:00 1-13:24:20 46 [migration/5]
+- root 0 0 00:00:17 1-13:24:20 47 [ksoftirqd/5]
+- root 0 0 00:00:00 1-13:24:20 49 [kworker/5:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 50 [cpuhp/6]
+- root 0 0 00:00:00 1-13:24:20 51 [idle_inject/6]
+- root 0 0 00:00:00 1-13:24:20 52 [migration/6]
+- root 0 0 00:00:31 1-13:24:20 53 [ksoftirqd/6]
+- root 0 0 00:00:00 1-13:24:20 55 [kworker/6:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 56 [cpuhp/7]
+- root 0 0 00:00:00 1-13:24:20 57 [idle_inject/7]
+- root 0 0 00:00:00 1-13:24:20 58 [migration/7]
+- root 0 0 00:00:26 1-13:24:20 59 [ksoftirqd/7]
+- root 0 0 00:00:00 1-13:24:20 61 [kworker/7:0H-events_highpri]
+- root 0 0 00:00:00 1-13:24:20 62 [kdevtmpfs]
+- root 0 0 00:00:00 1-13:24:20 63 [inet_frag_wq]
+- root 0 0 00:00:00 1-13:24:20 65 [kauditd]
+- root 0 0 00:00:00 1-13:24:20 66 [khungtaskd]
+- root 0 0 00:00:00 1-13:24:20 67 [oom_reaper]
+- root 0 0 00:00:00 1-13:24:20 69 [writeback]
+- root 0 0 00:00:15 1-13:24:20 70 [kcompactd0]
+- root 0 0 00:00:00 1-13:24:20 71 [ksmd]
+- root 0 0 00:00:00 1-13:24:20 72 [khugepaged]
+- root 0 0 00:00:00 1-13:24:20 73 [kintegrityd]
+- root 0 0 00:00:00 1-13:24:20 74 [kblockd]
+- root 0 0 00:00:00 1-13:24:20 75 [blkcg_punt_bio]
+- root 0 0 00:00:00 1-13:24:20 78 [tpm_dev_wq]
+- root 0 0 00:00:00 1-13:24:20 79 [ata_sff]
+- root 0 0 00:00:00 1-13:24:20 80 [md]
+- root 0 0 00:00:00 1-13:24:20 82 [md_bitmap]
+- root 0 0 00:00:00 1-13:24:20 83 [edac-poller]
+- root 0 0 00:00:00 1-13:24:20 84 [devfreq_wq]
+- root 0 0 00:00:00 1-13:24:20 85 [watchdogd]
+- root 0 0 00:00:06 1-13:24:20 87 [kworker/0:1H-events_highpri]
+- root 0 0 00:00:02 1-13:24:20 88 [kswapd0]
+- root 0 0 00:00:00 1-13:24:20 89 [ecryptfs-kthread]
+- root 0 0 00:00:00 1-13:24:20 90 [kthrotld]
+- root 0 0 00:00:00 1-13:24:20 91 [irq/122-pciehp]
+- root 0 0 00:00:00 1-13:24:20 92 [irq/126-pciehp]
+- root 0 0 00:00:00 1-13:24:20 94 [acpi_thermal_pm]
+- root 0 0 00:00:01 1-13:24:20 96 [hwrng]
+- root 0 0 00:00:00 1-13:24:20 97 [mld]
+- root 0 0 00:00:05 1-13:24:20 98 [kworker/6:1H-kblockd]
+- root 0 0 00:00:00 1-13:24:20 99 [ipv6_addrconf]
+- root 0 0 00:00:00 1-13:24:19 109 [kstrp]
+- root 0 0 00:00:00 1-13:24:19 115 [charger_manager]
+- root 0 0 00:00:05 1-13:24:19 137 [kworker/7:1H-events_highpri]
+- root 0 0 00:00:05 1-13:24:19 150 [kworker/5:1H-kblockd]
+- root 0 0 00:00:05 1-13:24:19 151 [kworker/1:1H-events_highpri]
+- root 0 0 00:00:05 1-13:24:19 152 [kworker/2:1H-kblockd]
+- root 0 0 00:00:06 1-13:24:19 153 [kworker/4:1H-events_highpri]
+- root 0 0 00:00:06 1-13:24:19 154 [kworker/3:1H-events_highpri]
+- root 0 0 00:00:00 1-13:24:19 206 [cryptd]
+- root 0 0 00:00:00 1-13:24:19 241 [nvme-wq]
+- root 0 0 00:00:00 1-13:24:19 242 [nvme-reset-wq]
+- root 0 0 00:00:00 1-13:24:19 243 [nvme-delete-wq]
+- root 0 0 00:00:00 1-13:24:19 244 [nvme-auth-wq]
+- root 0 0 00:02:12 1-13:24:19 277 [irq/51-DELL08E1:00]
+- root 0 0 00:00:00 1-13:24:19 278 [ttm]
+- root 0 0 00:00:00 1-13:24:19 279 [card0-crtc0]
+- root 0 0 00:00:00 1-13:24:19 280 [card0-crtc1]
+- root 0 0 00:00:00 1-13:24:19 281 [card0-crtc2]
+- root 0 0 00:00:00 1-13:24:18 284 [USBC000:00-con1]
+- root 0 0 00:00:00 1-13:20:58 684 [kdmflush/252:0]
+- root 0 0 00:00:00 1-13:20:58 689 [kcryptd_io/252:]
+- root 0 0 00:00:00 1-13:20:58 690 [kcryptd/252:0]
+- root 0 0 00:00:22 1-13:20:58 691 [dmcrypt_write/252:0]
+- root 0 0 00:00:00 1-13:20:58 695 [kdmflush/252:1]
+- root 0 0 00:00:00 1-13:20:58 696 [kdmflush/252:2]
+- root 0 0 00:00:22 1-13:20:57 743 [jbd2/dm-1-8]
+- root 0 0 00:00:00 1-13:20:57 744 [ext4-rsv-conver]
+0::/system.slice/systemd-journald.service root 139712 98860 00:00:33 1-13:20:57 805 /lib/systemd/systemd-journald
+0::/system.slice/systemd-udevd.service root 27212 6912 00:00:00 1-13:20:56 888 /lib/systemd/systemd-udevd
+- root 0 0 00:00:00 1-13:20:56 1125 [cfg80211]
+- root 0 0 00:01:28 1-13:20:56 1174 [irq/158-iwlwifi:default_queue]
+- root 0 0 00:00:40 1-13:20:56 1175 [irq/159-iwlwifi:queue_1]
+- root 0 0 00:01:20 1-13:20:56 1176 [irq/160-iwlwifi:queue_2]
+- root 0 0 00:00:47 1-13:20:56 1177 [irq/161-iwlwifi:queue_3]
+- root 0 0 00:00:41 1-13:20:56 1178 [irq/162-iwlwifi:queue_4]
+- root 0 0 00:00:00 1-13:20:56 1179 [irq/163-iwlwifi:exception]
+- root 0 0 00:00:00 1-13:20:56 1193 [jbd2/nvme0n1p2-8]
+- root 0 0 00:00:00 1-13:20:56 1194 [ext4-rsv-conver]
+0::/system.slice/rpcbind.service _rpc 8104 3968 00:00:00 1-13:20:56 1426 /sbin/rpcbind -f -w
+0::/system.slice/systemd-oomd.service systemd-oom 14836 6784 00:02:02 1-13:20:56 1429 /lib/systemd/systemd-oomd
+0::/system.slice/systemd-resolved.service systemd-resolve 27256 14588 00:01:24 1-13:20:56 1431 /lib/systemd/systemd-resolved
+0::/system.slice/systemd-timesyncd.service systemd-timesync 89720 7296 00:00:00 1-13:20:56 1432 /lib/systemd/systemd-timesyncd
+- root 0 0 00:00:00 1-13:20:56 1435 [rpciod]
+- root 0 0 00:00:00 1-13:20:56 1436 [xprtiod]
+0::/system.slice/acpid.service root 2816 1920 00:00:07 1-13:20:55 1574 /usr/sbin/acpid
+0::/system.slice/avahi-daemon.service avahi 7760 3840 00:00:05 1-13:20:55 1577 avahi-daemon: running [klapp-0323.local]
+0::/system.slice/bluetooth.service root 10628 5248 00:00:00 1-13:20:55 1579 /usr/lib/bluetooth/bluetoothd
+0::/system.slice/dbus.service messagebus 11624 7900 00:02:02 1-13:20:55 1597 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+0::/system.slice/NetworkManager.service root 484524 21164 00:02:03 1-13:20:55 1598 /usr/sbin/NetworkManager --no-daemon
+0::/system.slice/irqbalance.service root 82836 3712 00:00:10 1-13:20:55 1606 /usr/sbin/irqbalance --foreground
+0::/system.slice/networkd-dispatcher.service root 41496 20480 00:00:00 1-13:20:55 1612 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+0::/system.slice/polkit.service root 244192 12120 00:05:25 1-13:20:55 1619 /usr/libexec/polkitd --no-debug
+0::/system.slice/power-profiles-daemon.service root 240456 7800 00:00:01 1-13:20:55 1623 /usr/libexec/power-profiles-daemon
+0::/system.slice/rsyslog.service syslog 222456 6528 00:00:06 1-13:20:55 1624 /usr/sbin/rsyslogd -n -iNONE
+0::/system.slice/snapd.service root 1837904 35816 00:00:22 1-13:20:55 1636 /usr/lib/snapd/snapd
+0::/system.slice/accounts-daemon.service root 242020 9292 00:00:05 1-13:20:55 1638 /usr/libexec/accounts-daemon
+0::/system.slice/cron.service root 9976 2816 00:00:01 1-13:20:55 1641 /usr/sbin/cron -f -P
+0::/system.slice/switcheroo-control.service root 236984 6912 00:00:00 1-13:20:55 1645 /usr/libexec/switcheroo-control
+0::/system.slice/systemd-logind.service root 48556 7656 00:00:07 1-13:20:55 1646 /lib/systemd/systemd-logind
+0::/system.slice/systemd-machined.service root 14980 7040 00:00:27 1-13:20:55 1648 /lib/systemd/systemd-machined
+0::/system.slice/thermald.service root 276576 10624 00:11:19 1-13:20:55 1651 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+0::/system.slice/udisks2.service root 394520 16456 00:00:02 1-13:20:55 1653 /usr/libexec/udisks2/udisksd
+0::/system.slice/uptimed.service daemon 2808 1664 00:00:00 1-13:20:55 1654 /usr/sbin/uptimed -f
+0::/system.slice/wpa_supplicant.service root 17944 11264 00:00:04 1-13:20:55 1656 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+0::/system.slice/atd.service daemon 3864 2304 00:00:00 1-13:20:55 1669 /usr/sbin/atd -f
+0::/system.slice/avahi-daemon.service avahi 7496 1156 00:00:00 1-13:20:55 1680 avahi-daemon: chroot helper
+0::/system.slice/ModemManager.service root 244448 12992 00:00:02 1-13:20:55 1696 /usr/sbin/ModemManager
+0::/system.slice/bolt.service root 240684 7848 00:00:01 1-13:20:55 1701 /usr/libexec/boltd
+0::/system.slice/vmware-USBArbitrator.service root 14708 2444 00:00:03 1-13:20:55 1718 /usr/bin/vmware-usbarbitrator
+0::/system.slice/cups.service root 148236 16512 00:00:00 1-13:20:55 1734 /usr/sbin/cupsd -l
+0::/system.slice/nessusagent.service root 2816 1408 00:00:00 1-13:20:55 1739 /opt/nessus_agent/sbin/nessus-service -q
+0::/system.slice/snap.canonical-livepatch.canonical-livepatchd.service root 1235336 10888 00:00:03 1-13:20:55 1741 /snap/canonical-livepatch/282/canonical-livepatchd
+- root 0 0 00:00:00 1-13:20:55 1742 [ipmi-msghandler]
+0::/system.slice/snap.cups.cups-browsed.service root 2892 1152 00:00:00 1-13:20:55 1743 /bin/sh /snap/cups/1052/scripts/run-cups-browsed
+0::/system.slice/snap.cups.cupsd.service root 2892 1280 00:00:00 1-13:20:55 1744 /bin/sh /snap/cups/1052/scripts/run-cupsd
+0::/system.slice/snap.yubioath-desktop.pcscd.service root 259504 2992 00:00:00 1-13:20:55 1747 /snap/yubioath-desktop/13/usr/sbin/pcscd --foreground --auto-exit
+0::/system.slice/snmpd.service Debian-snmp 27428 12800 00:01:16 1-13:20:55 1755 /usr/sbin/snmpd -LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f
+0::/system.slice/containerd.service root 2095588 43096 00:00:25 1-13:20:55 1778 /usr/bin/containerd
+0::/system.slice/bmc-watchdog.service root 10988 3120 00:00:06 1-13:20:55 1815 /usr/sbin/bmc-watchdog -d -u 4 -p 0 -a 1 -F -P -L -S -O -i 900 -e 60
+0::/system.slice/smstools.service smsd 6972 5224 00:00:04 1-13:20:55 1827 /usr/sbin/smsd -p/var/run/smstools/smsd.pid -i/var/run/smstools/smsd.working -usmsd -gsmsd
+0::/system.slice/smstools.service smsd 6976 5224 00:00:06 1-13:20:55 1832 /usr/sbin/smsd -p/var/run/smstools/smsd.pid -i/var/run/smstools/smsd.working -usmsd -gsmsd
+0::/system.slice/ssh.service root 15436 9088 00:00:01 1-13:20:55 1834 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+0::/system.slice/gdm.service root 241692 8704 00:00:00 1-13:20:55 1857 /usr/sbin/gdm3
+0::/system.slice/libvirtd.service root 1653084 45060 00:00:00 1-13:20:55 1862 /usr/sbin/libvirtd
+0::/system.slice/unattended-upgrades.service root 118532 23040 00:00:00 1-13:20:55 1863 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+0::/system.slice/colord.service colord 246192 12996 00:00:00 1-13:20:55 1875 /usr/libexec/colord
+0::/system.slice/upower.service root 242968 8832 00:00:09 1-13:20:55 1895 /usr/libexec/upowerd
+0::/system.slice/rtkit-daemon.service rtkit 154004 3328 00:00:00 1-13:20:54 2300 /usr/libexec/rtkit-daemon
+0::/system.slice/libvirtd.service libvirt-dnsmasq 10084 1800 00:00:12 1-13:20:54 2329 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/mk-multinode-demo.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service root 10084 776 00:00:00 1-13:20:54 2330 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/mk-multinode-demo.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service libvirt-dnsmasq 10112 2332 00:00:13 1-13:20:54 2405 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/crc.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service root 10084 924 00:00:00 1-13:20:54 2406 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/crc.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service libvirt-dnsmasq 10112 2448 00:00:14 1-13:20:54 2468 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service root 10084 784 00:00:00 1-13:20:54 2469 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/snap.cups.cupsd.service root 69212 12928 00:00:00 1-13:20:54 2502 cupsd -f -s /var/snap/cups/common/etc/cups/cups-files.conf -c /var/snap/cups/common/etc/cups/cupsd.conf
+0::/system.slice/snap.cups.cupsd.service root 241612 9088 00:00:01 1-13:20:54 2503 cups-proxyd /var/snap/cups/common/run/cups.sock /run/cups/cups.sock -l --logdir /var/snap/cups/1052/var/log
+0::/system.slice/libvirtd.service libvirt-dnsmasq 10084 1808 00:00:15 1-13:20:54 2540 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/mk-multinode-demo1.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/libvirtd.service root 10084 784 00:00:00 1-13:20:54 2541 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/mk-multinode-demo1.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+0::/system.slice/snap.cups.cups-browsed.service root 2892 768 00:00:00 1-13:20:53 2819 /bin/sh /snap/cups/1052/scripts/run-cups-browsed
+0::/system.slice/packagekit.service root 448604 111488 00:02:28 1-13:20:52 3393 /usr/libexec/packagekitd
+0::/system.slice/cups-browsed.service root 173132 11776 00:00:02 1-13:20:51 4099 /usr/sbin/cups-browsed
+0::/system.slice/docker.service root 2216200 83044 00:00:22 1-13:20:51 4127 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+0::/system.slice/kerneloops.service kernoops 13092 2056 00:00:00 1-13:20:51 4150 /usr/sbin/kerneloops --test
+0::/system.slice/kerneloops.service kernoops 13092 2188 00:00:00 1-13:20:51 4155 /usr/sbin/kerneloops
+- root 0 0 00:00:00 1-13:20:51 4196 [iprt-VBoxWQueue]
+- root 0 0 00:00:00 1-13:20:51 4218 [iprt-VBoxTscThread]
+0::/system.slice/xinetd.service root 9688 2308 00:00:00 1-13:20:51 4233 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -inetd_ipv6
+0::/system.slice/system-postfix.slice/postfix@-.service root 41232 4424 00:00:00 1-13:20:49 6582 /usr/lib/postfix/sbin/master -w
+0::/system.slice/uuidd.service uuidd 12148 3200 00:00:00 1-13:20:41 8028 /usr/sbin/uuidd --socket-activation
+0::/user.slice/user-1000.slice/session-8.scope root 318576 11648 00:00:00 1-13:19:57 13864 gdm-session-worker [pam/gdm-password]
+
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 45716 26264 00:00:10 1-12:19:22 140434 gunicorn: master [cmk.agent_receiver.main:main_app()]
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 88920 64964 00:02:25 1-12:19:22 140439 gunicorn: worker [cmk.agent_receiver.main:main_app()]
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 217576 33548 00:00:49 1-12:19:21 140441 python3 /omd/sites/cmksite/bin/mkeventd
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 52960 27756 00:00:40 1-12:19:21 140450 liveproxyd[master]
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 46744 20736 00:00:45 1-12:19:21 140465 python3 /omd/sites/cmksite/bin/mknotifyd
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 503684 4092 00:00:08 1-12:19:21 140469 /omd/sites/cmksite/bin/rrdcached -t 4 -w 3600 -z 1800 -f 7200 -s cmksite -m 660 -l unix:/omd/sites/cmksite/tmp/run/rrdcached.sock -p /omd/sites/cmksite/tmp/rrdcached.pid -j /omd/sites/cmksite/var/rrdcached -o /omd/sites/cmksite/var/log/rrdcached.log
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 1873852 15744 00:01:46 1-12:19:21 140491 /omd/sites/cmksite/bin/cmc /omd/sites/cmksite/var/check_mk/core/config.pb
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 173536 111744 00:00:02 1-12:19:21 140515 python3 /omd/sites/cmksite/bin/cmk --create-rrd --keepalive
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 174048 112592 00:00:06 1-12:19:21 140517 python3 /omd/sites/cmksite/bin/cmk --handle-alerts --keepalive
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 22492 9344 00:00:00 1-12:19:21 140521 /omd/sites/cmksite/lib/cmc/checkhelper
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 22492 9344 00:00:00 1-12:19:21 140522 /omd/sites/cmksite/lib/cmc/checkhelper
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 22492 9344 00:00:00 1-12:19:21 140523 /omd/sites/cmksite/lib/cmc/checkhelper
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 22492 9344 00:00:00 1-12:19:21 140524 /omd/sites/cmksite/lib/cmc/checkhelper
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 22492 9216 00:00:00 1-12:19:21 140525 /omd/sites/cmksite/lib/cmc/checkhelper
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 185192 122116 00:00:55 1-12:19:21 140526 python3 /omd/sites/cmksite/bin/cmk --checker
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 184112 120860 00:00:16 1-12:19:21 140527 python3 /omd/sites/cmksite/bin/cmk --checker
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 183968 120636 00:00:03 1-12:19:21 140528 python3 /omd/sites/cmksite/bin/cmk --checker
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 182940 119884 00:00:03 1-12:19:21 140529 python3 /omd/sites/cmksite/bin/cmk --checker
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 173552 111708 00:00:02 1-12:19:21 140530 python3 /omd/sites/cmksite/bin/cmk --keepalive --real-time-checks
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 70804 52612 00:02:01 1-12:19:21 140531 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 70776 52612 00:00:47 1-12:19:21 140532 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 70948 52400 00:00:08 1-12:19:21 140533 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 71072 52472 00:00:00 1-12:19:21 140534 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 70972 51628 00:00:00 1-12:19:21 140535 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 70972 51352 00:00:00 1-12:19:21 140536 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 47048 00:00:00 1-12:19:21 140537 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 46792 00:00:00 1-12:19:21 140538 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 46912 00:00:00 1-12:19:21 140539 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 47188 00:00:00 1-12:19:21 140540 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 47084 00:00:00 1-12:19:21 140541 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 46952 00:00:00 1-12:19:21 140542 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 65716 46956 00:00:00 1-12:19:21 140543 python3 /omd/sites/cmksite/bin/fetcher
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 124536 63972 00:00:01 1-12:19:21 140544 python3 /omd/sites/cmksite/bin/cmk --notify --keepalive
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 5120 2944 00:00:02 1-12:19:21 140545 /omd/sites/cmksite/lib/cmc/icmpsender 8 0 1000
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 11168 6016 00:00:02 1-12:19:21 140546 /omd/sites/cmksite/lib/cmc/icmpreceiver
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 18524 6976 00:00:03 1-12:19:20 140600 /usr/sbin/apache2 -f /omd/sites/cmksite/etc/apache/apache.conf
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 18508 3912 00:00:01 1-12:19:20 140603 /usr/sbin/apache2 -f /omd/sites/cmksite/etc/apache/apache.conf
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 334416 257960 00:03:05 1-12:19:20 140604 /usr/sbin/apache2 -f /omd/sites/cmksite/etc/apache/apache.conf
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 217668 37016 00:01:11 1-12:19:16 140627 dcd
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 73484 13640 00:02:17 1-12:19:16 140634 /omd/sites/cmksite/bin/redis-server unixsocket:/omd/sites/cmksite/tmp/run/redis
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 331996 255700 00:02:56 1-12:19:16 140640 /usr/sbin/apache2 -f /omd/sites/cmksite/etc/apache/apache.conf
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 331012 254212 00:02:53 1-12:19:13 140664 /usr/sbin/apache2 -f /omd/sites/cmksite/etc/apache/apache.conf
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-0e92d346-78ab-4393-9207-196ac2a0f2b6.scope cmksite 213324 29568 00:00:00 1-12:19:05 140696 /usr/bin/php-cgi -d session.save_handler=files -d session.save_path=/omd/sites/cmksite/tmp/php/session -d upload_tmp_dir=/omd/sites/cmksite/tmp/php/upload -d soap.wsdl_cache_dir=/omd/sites/cmksite/tmp/php/wsdl-cache -d safe_mode=Off -d mysql.default_socket=/omd/sites/cmksite/tmp/run/mysqld/mysqld.sock
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-d3531dce-fbae-4e32-9840-c16c1ddadf85.scope root 19832 8064 00:00:00 1-01:24:07 1264083 sudo su - cmksite
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-d3531dce-fbae-4e32-9840-c16c1ddadf85.scope root 19832 2992 00:00:00 1-01:24:05 1264084 sudo su - cmksite
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-d3531dce-fbae-4e32-9840-c16c1ddadf85.scope root 13608 5248 00:00:00 1-01:24:05 1264085 su - cmksite
+0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-d3531dce-fbae-4e32-9840-c16c1ddadf85.scope cmksite 12376 6144 00:00:00 1-01:24:05 1264086 -bash
+
+<<<mem>>>
+MemTotal:       32659428 kB
+MemFree:         1669032 kB
+MemAvailable:   13619624 kB
+Buffers:          571620 kB
+Cached:         12913844 kB
+SwapCached:            8 kB
+Active:         14038464 kB
+Inactive:       15073828 kB
+Active(anon):   12222992 kB
+Inactive(anon):  5191780 kB
+Active(file):    1815472 kB
+Inactive(file):  9882048 kB
+Unevictable:      276932 kB
+Mlocked:             428 kB
+SwapTotal:       1003516 kB
+SwapFree:        1002236 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             97400 kB
+Writeback:             0 kB
+AnonPages:      15903548 kB
+Mapped:          2413352 kB
+Shmem:           1787952 kB
+KReclaimable:     770516 kB
+Slab:            1210464 kB
+SReclaimable:     770516 kB
+SUnreclaim:       439948 kB
+KernelStack:       47820 kB
+PageTables:       182852 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    17333228 kB
+Committed_AS:   96562732 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       92248 kB
+VmallocChunk:          0 kB
+Percpu:            10624 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      443228 kB
+DirectMap2M:    18233344 kB
+DirectMap1G:    14680064 kB
+<<<cpu>>>
+2.01 1.35 1.15 1/2976 2654514 8
+254098
+<<<uptime>>>
+134660.36 550919.58
+<<<lnx_if>>>
+[start_iplink]
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: wlo1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 3c:58:c2:48:50:d0 brd ff:ff:ff:ff:ff:ff
+    altname wlp0s20f3
+    inet 192.168.0.239/24 brd 192.168.0.255 scope global dynamic noprefixroute wlo1
+       valid_lft 600512sec preferred_lft 600512sec
+    inet6 2a02:810d:2440:14c4:5698:1740:6141:2f59/128 scope global dynamic noprefixroute 
+       valid_lft 600511sec preferred_lft 600511sec
+    inet6 2a02:810d:2440:14c4:5959:618d:71b8:848f/64 scope global temporary dynamic 
+       valid_lft 79246sec preferred_lft 43200sec
+    inet6 2a02:810d:2440:14c4:8b90:a0c:7a5d:86f6/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 79246sec preferred_lft 43200sec
+    inet6 fe80::6948:3d43:f471:8cea/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: virbr1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:07:f1:3d brd ff:ff:ff:ff:ff:ff
+    inet 192.168.39.1/24 brd 192.168.39.255 scope global virbr1
+       valid_lft forever preferred_lft forever
+4: crc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:fd:be:d0 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.130.1/24 brd 192.168.130.255 scope global crc
+       valid_lft forever preferred_lft forever
+[end_iplink]
+<<<lnx_if:sep(58)>>>
+    lo: 221359826  651228    0    0    0     0          0         0 221359826  651228    0    0    0     0       0          0
+  wlo1: 6246748833 6699131    0    0    0     0          0         0 1032116383 3116347    0    0    0     0       0          0
+virbr1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   crc:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+virbr0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+virbr2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+docker0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+[lo]
+Address: 00:00:00:00:00:00
+[crc]
+Address: 52:54:00:fd:be:d0
+[wlo1]
+Address: 3c:58:c2:48:50:d0
+[docker0]
+Address: 02:42:68:cc:ed:3f
+[virbr0]
+Address: 52:54:00:85:35:dc
+[virbr1]
+Address: 52:54:00:07:f1:3d
+[virbr2]
+Address: 52:54:00:dc:58:51
+<<<tcp_conn_stats>>>
+08 2
+01 30
+02 5
+0A 17
+05 1
+06 59
+<<<diskstat>>>
+1719006567
+ 259       0 nvme0n1 315016 90342 26022929 104297 2894458 1631865 107754458 22400641 0 2719288 22722404 0 0 0 0 180983 217466
+ 252       0 dm-0 403287 0 25993786 193108 4526015 0 107752408 27624124 0 2736024 27817232 0 0 0 0 0 0
+ 252       1 dm-1 403049 0 25983330 193652 4511299 0 107752152 26279208 0 2735704 26472860 0 0 0 0 0 0
+ 252       2 dm-2 194 0 8616 40 32 0 256 156 0 124 196 0 0 0 0 0 0
+[dmsetup_info]
+nvme0n1p3_crypt 252:0  
+vgubuntu-root 252:1 vgubuntu root
+vgubuntu-swap_1 252:2 vgubuntu swap_1
+<<<kernel>>>
+1719006567
+nr_free_pages 416755
+nr_zone_inactive_anon 1297945
+nr_zone_active_anon 3055821
+nr_zone_inactive_file 2470512
+nr_zone_active_file 453868
+nr_zone_unevictable 69160
+nr_zone_write_pending 24350
+nr_mlock 107
+nr_bounce 0
+nr_zspages 0
+nr_free_cma 0
+nr_unaccepted 0
+numa_hit 876617928
+numa_miss 0
+numa_foreign 0
+numa_interleave 1857
+numa_local 876550171
+numa_other 0
+nr_inactive_anon 1297945
+nr_active_anon 3055821
+nr_inactive_file 2470512
+nr_active_file 453868
+nr_unevictable 69160
+nr_slab_reclaimable 192629
+nr_slab_unreclaimable 109987
+nr_isolated_anon 0
+nr_isolated_file 0
+workingset_nodes 49144
+workingset_refault_anon 0
+workingset_refault_file 40386
+workingset_activate_anon 0
+workingset_activate_file 3260
+workingset_restore_anon 0
+workingset_restore_file 2190
+workingset_nodereclaim 9600
+nr_anon_pages 3976033
+nr_mapped 603411
+nr_file_pages 3371295
+nr_dirty 24350
+nr_writeback 0
+nr_writeback_temp 0
+nr_shmem 446915
+nr_shmem_hugepages 0
+nr_shmem_pmdmapped 0
+nr_file_hugepages 0
+nr_file_pmdmapped 0
+nr_anon_transparent_hugepages 0
+nr_vmscan_write 32
+nr_vmscan_immediate_reclaim 0
+nr_dirtied 13351902
+nr_written 11603043
+nr_throttled_written 0
+nr_kernel_misc_reclaimable 0
+nr_foll_pin_acquired 812
+nr_foll_pin_released 812
+nr_kernel_stack 47820
+nr_page_table_pages 45713
+nr_sec_page_table_pages 0
+nr_swapcached 2
+pgpromote_success 0
+pgpromote_candidate 0
+nr_dirty_threshold 654661
+nr_dirty_background_threshold 326931
+pgpgin 13401751
+pgpgout 53877229
+pswpin 0
+pswpout 32
+pgalloc_dma 1024
+pgalloc_dma32 7622810
+pgalloc_normal 1223426493
+pgalloc_movable 0
+pgalloc_device 0
+allocstall_dma 0
+allocstall_dma32 0
+allocstall_normal 109
+allocstall_movable 450
+allocstall_device 0
+pgskip_dma 0
+pgskip_dma32 0
+pgskip_normal 0
+pgskip_movable 0
+pgskip_device 0
+pgfree 1233842655
+pgactivate 5236
+pgdeactivate 0
+pglazyfree 48126
+pgfault 813431923
+pgmajfault 51027
+pglazyfreed 1
+pgrefill 801435
+pgreuse 86922211
+pgsteal_kswapd 1877383
+pgsteal_direct 35760
+pgsteal_khugepaged 0
+pgdemote_kswapd 0
+pgdemote_direct 0
+pgdemote_khugepaged 0
+pgscan_kswapd 1927087
+pgscan_direct 35895
+pgscan_khugepaged 0
+pgscan_direct_throttle 0
+pgscan_anon 61
+pgscan_file 1962921
+pgsteal_anon 29
+pgsteal_file 1913114
+zone_reclaim_failed 0
+pginodesteal 0
+slabs_scanned 1095874
+kswapd_inodesteal 1108
+kswapd_low_wmark_hit_quickly 1283
+kswapd_high_wmark_hit_quickly 2
+pageoutrun 1347
+pgrotated 82
+drop_pagecache 0
+drop_slab 0
+oom_kill 0
+numa_pte_updates 0
+numa_huge_pte_updates 0
+numa_hint_faults 0
+numa_hint_faults_local 0
+numa_pages_migrated 0
+pgmigrate_success 2327227
+pgmigrate_fail 3634255
+thp_migration_success 0
+thp_migration_fail 0
+thp_migration_split 0
+compact_migrate_scanned 37360440
+compact_free_scanned 214920260
+compact_isolated 8348401
+compact_stall 0
+compact_fail 0
+compact_success 0
+compact_daemon_wake 1320
+compact_daemon_migrate_scanned 37360440
+compact_daemon_free_scanned 214920260
+htlb_buddy_alloc_success 0
+htlb_buddy_alloc_fail 0
+unevictable_pgs_culled 67049679
+unevictable_pgs_scanned 65162752
+unevictable_pgs_rescued 66874360
+unevictable_pgs_mlocked 1800082
+unevictable_pgs_munlocked 1799967
+unevictable_pgs_cleared 0
+unevictable_pgs_stranded 8
+thp_fault_alloc 1
+thp_fault_fallback 0
+thp_fault_fallback_charge 0
+thp_collapse_alloc 0
+thp_collapse_alloc_failed 0
+thp_file_alloc 0
+thp_file_fallback 0
+thp_file_fallback_charge 0
+thp_file_mapped 0
+thp_split_page 0
+thp_split_page_failed 0
+thp_deferred_split_page 0
+thp_split_pmd 0
+thp_scan_exceed_none_pte 0
+thp_scan_exceed_swap_pte 0
+thp_scan_exceed_share_pte 0
+thp_split_pud 0
+thp_zero_page_alloc 0
+thp_zero_page_alloc_failed 0
+thp_swpout 0
+thp_swpout_fallback 0
+balloon_inflate 0
+balloon_deflate 0
+balloon_migrate 0
+swap_ra 0
+swap_ra_hit 0
+ksm_swpin_copy 0
+cow_ksm 0
+zswpin 0
+zswpout 0
+direct_map_level2_splits 205
+direct_map_level3_splits 13
+nr_unstable 0
+cpu  6288606 10247 1706119 55091977 92501 0 84619 0 0 0
+cpu0 777964 1626 213816 6890677 11376 0 13455 0 0 0
+cpu1 795202 1089 216841 6841324 11669 0 15426 0 0 0
+cpu2 799283 861 218834 6855466 11460 0 13691 0 0 0
+cpu3 772741 757 215728 6895471 11732 0 9996 0 0 0
+cpu4 799197 2039 207432 6894882 11525 0 7210 0 0 0
+cpu5 765785 1101 214424 6914997 11223 0 6560 0 0 0
+cpu6 785955 1222 208771 6902841 11787 0 11384 0 0 0
+cpu7 792477 1548 210270 6896316 11725 0 6895 0 0 0
+intr 386806678 0 138049 0 0 0 0 0 0 0 2196267 0 0 1140 0 0 0 3 96444004 0 177 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1899281 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 17909357 482 482 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1376218 36 43 197391 197197 190053 194404 192623 198668 201959 191369 21540721 53 2553115 576845 943782 658804 479050 210 1876 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 726905912
+btime 1718871907
+processes 2654560
+procs_running 4
+procs_blocked 0
+softirq 257797337 65926693 14643681 87 5805776 13576 0 273599 96246927 628 74886370
+<<<md>>>
+Personalities : 
+unused devices: <none>
+<<<vbox_guest>>>
+<<<postfix_mailq>>>
+[[[default]]]
+QUEUE_deferred 188 0
+QUEUE_active 136 0
+<<<postfix_mailq_status:sep(58)>>>
+default:the Postfix mail system is running:PID:6582
+<<<livestatus_status:sep(59)>>>
+[cmksite]
+accept_passive_host_checks;accept_passive_service_checks;average_latency_checker;average_latency_fetcher;average_latency_generic;average_latency_real_time;average_runnable_jobs_checker;average_runnable_jobs_fetcher;cached_log_messages;carbon_bytes_sent;carbon_bytes_sent_rate;carbon_overflows;carbon_overflows_rate;carbon_queue_usage;carbon_queue_usage_rate;check_external_commands;check_host_freshness;check_service_freshness;connections;connections_rate;core_pid;edition;enable_event_handlers;enable_flap_detection;enable_notifications;execute_host_checks;execute_service_checks;external_command_buffer_max;external_command_buffer_slots;external_command_buffer_usage;external_commands;external_commands_rate;forks;forks_rate;has_event_handlers;helper_usage_checker;helper_usage_fetcher;helper_usage_generic;helper_usage_real_time;host_checks;host_checks_rate;influxdb_bytes_sent;influxdb_bytes_sent_rate;influxdb_overflows;influxdb_overflows_rate;influxdb_queue_usage;influxdb_queue_usage_rate;interval_length;last_command_check;last_log_rotation;license_usage_history;livechecks;livechecks_rate;livestatus_active_connections;livestatus_overflows;livestatus_overflows_rate;livestatus_queued_connections;livestatus_threads;livestatus_usage;livestatus_version;log_messages;log_messages_rate;max_long_output_size;metrics_count;metrics_count_rate;mk_inventory_last;nagios_pid;neb_callbacks;neb_callbacks_rate;num_hosts;num_queued_alerts;num_queued_notifications;num_services;obsess_over_hosts;obsess_over_services;perf_data_count;perf_data_count_rate;process_performance_data;program_start;program_version;requests;requests_rate;rrdcached_bytes_sent;rrdcached_bytes_sent_rate;rrdcached_overflows;rrdcached_overflows_rate;rrdcached_queue_usage;rrdcached_queue_usage_rate;service_checks;service_checks_rate;state_file_created
+1;1;0;5.55622e-05;7.2933e-06;0;0;0;805;0;0;0;0;5e-05;-9.88131e-324;1;1;1;1975;0.0956979;140491;cloud;1;1;1;1;1;0;0;0;0;0;0;0;0;1.23078e-117;0.0265042;0.0299793;0;12152;0.157307;0;0;0;0;0;0;60;0;1717625714;LQ't#$x~}Qi Qb]_Q[ Q9:DE@CJQi ,LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gha_g__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi b[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi eg[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`ggbcc__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi b[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi eg[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gfcg___[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi `[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi b[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gdfda__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi `[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi b[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gc_ac__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi `[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi b[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gb`e___[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi `[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi b[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gaahe__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi ef[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi ech[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`g_deg__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi ef[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi ech[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`fhf_c__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi ef[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi ech[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N[ LQ:?DE2?460:5Qi Q_7ec3adc\5b5`\c2d6\37`g\e42f2_54cd55Q[ QD:E6092D9Qi Qd_`3fec``af_72daghd_chge6ca34d5e4h`fafde3_h_55__37d`3g464255a3b6Q[ QG6CD:@?Qi Qa]b]_Ac]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`feacg__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi _[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi _[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N.N;1961;0.000634969;1;0;0;0;20;9.18575e-15;2.3.0p4;100;9.88131e-324;2000;59491;0.138709;1718872713;140491;0;0;3;0;0;68;0;0;7652;0.0204336;1;1718875803;Check_MK 2.3.0p4;4805;0.0959894;994370;2.41834;0;0;5e-05;-9.88131e-324;11433;0.0404764;0
+[v23p6]
+accept_passive_host_checks;accept_passive_service_checks;average_latency_checker;average_latency_fetcher;average_latency_generic;average_latency_real_time;average_runnable_jobs_checker;average_runnable_jobs_fetcher;cached_log_messages;carbon_bytes_sent;carbon_bytes_sent_rate;carbon_overflows;carbon_overflows_rate;carbon_queue_usage;carbon_queue_usage_rate;check_external_commands;check_host_freshness;check_service_freshness;connections;connections_rate;core_pid;edition;enable_event_handlers;enable_flap_detection;enable_notifications;execute_host_checks;execute_service_checks;external_command_buffer_max;external_command_buffer_slots;external_command_buffer_usage;external_commands;external_commands_rate;forks;forks_rate;has_event_handlers;helper_usage_checker;helper_usage_fetcher;helper_usage_generic;helper_usage_real_time;host_checks;host_checks_rate;influxdb_bytes_sent;influxdb_bytes_sent_rate;influxdb_overflows;influxdb_overflows_rate;influxdb_queue_usage;influxdb_queue_usage_rate;interval_length;last_command_check;last_log_rotation;license_usage_history;livechecks;livechecks_rate;livestatus_active_connections;livestatus_overflows;livestatus_overflows_rate;livestatus_queued_connections;livestatus_threads;livestatus_usage;livestatus_version;log_messages;log_messages_rate;max_long_output_size;metrics_count;metrics_count_rate;mk_inventory_last;nagios_pid;neb_callbacks;neb_callbacks_rate;num_hosts;num_queued_alerts;num_queued_notifications;num_services;obsess_over_hosts;obsess_over_services;perf_data_count;perf_data_count_rate;process_performance_data;program_start;program_version;requests;requests_rate;rrdcached_bytes_sent;rrdcached_bytes_sent_rate;rrdcached_overflows;rrdcached_overflows_rate;rrdcached_queue_usage;rrdcached_queue_usage_rate;service_checks;service_checks_rate;state_file_created
+1;1;0;8.70544;1.50161;0;0;0;44;0;0;0;0;5e-05;-4.58734e-84;1;1;1;682;1.00635;1988714;cloud;1;1;1;1;1;6;0;0;12;0.10481;0;0;0;5.67423e-09;0.00377287;0.00980947;0;301;1.84892;0;0;0;0;0;0;60;0;1718968923;LQ't#$x~}Qi Qb]_Q[ Q9:DE@CJQi ,LQ:?DE2?460:5Qi Qcebgfgeg\__h_\cde`\h2ba\3ff3a4266457Q[ QD:E6092D9Qi Qcg4hea5af254db46fba3_3`2dg3c573f5d354625`4`77ggh4f24d2bg54_b557cQ[ QG6CD:@?Qi Qa]b]_Ae]446Q[ Q65:E:@?Qi Q446Q[ QA=2E7@C>Qi Q&3F?EF aa]_c]c {%$Q[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `f`gha_g__[ QE:>6K@?6Qi Qrt$%Q[ Q?F>09@DEDQi _[ Q?F>09@DED04=@F5Qi _[ Q?F>09@DED0D925@HQi _[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi _[ Q?F>0D6CG:46D04=@F5Qi _[ Q?F>0D6CG:46D0D925@HQi _[ Q?F>0D6CG:46D06I4=F565Qi _[ Q?F>0DJ?E96E:40E6DEDQi _[ Q?F>0DJ?E96E:40E6DED06I4=F565Qi _[ Q6IE6?D:@?0?E@AQi 72=D6N.N;1;0.1125;1;0;0;0;20;0.00377068;2.3.0p6;307;2.93053;2000;96566;13.3275;1719006552;1988714;0;0;2;0;0;225;0;0;18369;1.94439;1;1719006550;Check_MK 2.3.0p6;1001;2.79868;2.23446e+06;91.1284;0;0;0.0006;-4.58564e-06;34985;3.39339;0
+<<<livestatus_ssl_certs:sep(124)>>>
+[v23p6]
+/omd/sites/v23p6/etc/ssl/ca.pem|2034501675
+/omd/sites/v23p6/etc/ssl/sites/v23p6.pem|2034501678
+<<<mkeventd_status:sep(0)>>>
+["v23p6"]
+[["status_config_load_time", "status_num_open_events", "status_virtual_memory_size", "status_messages", "status_message_rate", "status_average_message_rate", "status_rule_tries", "status_rule_trie_rate", "status_average_rule_trie_rate", "status_rule_hits", "status_rule_hit_rate", "status_average_rule_hit_rate", "status_drops", "status_drop_rate", "status_average_drop_rate", "status_overflows", "status_overflow_rate", "status_average_overflow_rate", "status_events", "status_event_rate", "status_average_event_rate", "status_connects", "status_connect_rate", "status_average_connect_rate", "status_average_processing_time", "status_average_sync_time", "status_average_request_time", "status_replication_slavemode", "status_replication_last_sync", "status_replication_success", "status_event_limit_host", "status_event_limit_rule", "status_event_limit_overall", "status_event_limit_active_hosts", "status_event_limit_active_rules", "status_event_limit_active_overall"], [1718968922, 0, 220745728, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 210, 0.0, 0.07141721675141438, 0.0, 0.0, 0.00024989892201694107, "master", 0.0, false, 1000, 1000, 10000, [], [], false]]
+<<<cmk_site_statistics:sep(59)>>>
+[v23p6]
+2;0;0;0
+192;0;0;16;4;13
+<<<job>>>
+<<<lnx_thermal:sep(124)>>>
+thermal_zone0|enabled|acpitz|25000|107000|critical
+thermal_zone1|enabled|INT3400 Thermal|20000||
+thermal_zone2|enabled|TMEM|42050|-274000|passive|-274000|passive|127050|critical|127050|hot|60050|passive|70050|active|65050|active
+thermal_zone3|enabled|TSKN|47050|-274000|passive|-274000|passive|127050|critical|127050|hot|66050|passive|81050|active
+thermal_zone4|enabled|NGFF|35050|-274000|passive|-274000|passive|127050|critical|127050|hot|60050|passive|70050|active
+thermal_zone5|enabled|pch_cannonlake|62000|120000|critical
+thermal_zone6|enabled|B0D4|90050|127050|critical|127050|hot|99050|passive|127050|active|125050|active|124050|active|122550|active|121050|active
+thermal_zone7|enabled|iwlwifi_1|41000|-2147483648|passive|-2147483648|passive|-2147483648|passive|-2147483648|passive|-2147483648|passive|-2147483648|passive|-2147483648|passive|-2147483648|passive
+thermal_zone8|enabled|x86_pkg_temp|67000|-274000|passive|-274000|passive
+<<<omd_status:cached(1719006560,60)>>>
+[v23p6]
+agent-receiver 0
+mkeventd 0
+liveproxyd 0
+mknotifyd 0
+rrdcached 0
+cmc 0
+apache 0
+dcd 0
+redis 0
+crontab 0
+OVERALL 0
+<<<mknotifyd:sep(0)>>>
+1719006568
+[v23p6]
+Version:         2.3.0p6
+Updated:         1719006549 (2024-06-21 23:49:09)
+Started:         1718968923 (2024-06-21 13:22:03, 37626 sec ago)
+Configuration:   1718968923 (2024-06-21 13:22:03, 37626 sec ago)
+Listening FD:    None
+
+Spool:           New
+Count:           0
+Oldest:          -
+Youngest:        -
+
+Spool:           Deferred
+Count:           0
+Oldest:          -
+Youngest:        -
+
+Spool:           Corrupted
+Count:           0
+Oldest:          -
+Youngest:        -
+<<<omd_apache:sep(124)>>>
+
+[v23p6]
+/v23p6/check_mk/view.py?host=net&site=v23p6&view_name=host|200|378096|423537
+/v23p6/check_mk/ajax_vs_autocomplete.py|200|82|23863
+/v23p6/check_mk/view.py?view_name=allhosts|200|121525|102115
+/v23p6/check_mk/view.py?host=myhost&site=v23p6&view_name=host|200|245640|207656
+/v23p6/check_mk/ajax_vs_autocomplete.py|200|88|20770
+/v23p6/check_mk/ajax_popup_action_menu.py?_back_url=view.py%3Fhost%3Dmyhost%26selection%3D7b5efc84-b118-4ba4-921a-5a54dcf2b732%26site%3Dv23p6%26view_name%3Dhost&host=myhost&service=Check_MK&site=v23p6&_ajaxid=0|200|1129|32536
+
+<<<omd_diskusage:sep(0)>>>
+[site v23p6]
+330685118	/omd/sites/v23p6
+180261	/omd/sites/v23p6/var/log
+259699294	/omd/sites/v23p6/var/check_mk/rrd
+20480	/omd/sites/v23p6/var/pnp4nagios/
+665808	/omd/sites/v23p6/tmp/
+335883	/omd/sites/v23p6/local/
+58690469	/omd/sites/v23p6/var/check_mk/agents/
+0 /omd/sites/v23p6/var/mkeventd/history/
+1357533	/omd/sites/v23p6/var/check_mk/core/
+0 /omd/sites/v23p6/var/check_mk/inventory_archive/
+<<<omd_info:sep(59)>>>
+[versions]
+version;number;edition;demo
+2.3.0p6.cce;2.3.0p6;cce;0
+[sites]
+site;used_version;autostart
+v23p6;2.3.0p6.cce;1
+
+<<<timesyncd>>>
+       Server: 2620:2d:4000:1::40 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: B7A08584
+    Precision: 1us (-25)
+Root distance: 686us (max: 5s)
+       Offset: -216us
+        Delay: 31.665ms
+       Jitter: 1.681692s
+ Packet count: 58
+    Frequency: +6.367ppm
+[[[1719005428]]]
+<<<timesyncd_ntpmessage:sep(10)>>>
+NTPMessage={ Leap=0, Version=4, Mode=4, Stratum=2, Precision=-25, RootDelay=1.007ms, RootDispersion=183us, Reference=B7A08584, OriginateTimestamp=Fri 2024-06-21 23:30:28 CEST, ReceiveTimestamp=Fri 2024-06-21 23:30:28 CEST, TransmitTimestamp=Fri 2024-06-21 23:30:28 CEST, DestinationTimestamp=Fri 2024-06-21 23:30:28 CEST, Ignored=no PacketCount=58, Jitter=1.681692s }
+Timezone=Europe/Berlin
+<<<local:sep(0)>>>
